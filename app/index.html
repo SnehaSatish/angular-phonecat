@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" ng-app="phonecat">
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/services.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+</head>
+<body>
+
+  <div ng-view></div>
+<ul>
+    <li ng-repeat="phone in phones">
+      {{phone.name}}
+      <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+<p>Total number of phones : {{phones.length}}</p>
+    <ul>
+        <li>
+           {{hello[0].word1}}
+           {{hello[0].word2}}
+        </li>
+    </ul>
+<ul>
+    <li ng-repeat=" in map"></li>
+      {{}}
+</ul>
+<table>
+    <tr>
+        <th>Row number</th>
+    </tr>
+    <tr ng-repeat = "i in [0,1,2,3,4,5,6,7]"><td>{{i}}</td></tr>
+
+</table>
+<table>
+    <tr>
+        <th>Row numbers in inverse order</th>
+    </tr>
+    <tr ng-repeat = "i in [0,1,2,3,4,5,6,7]"><td>{{i+2}}</td></tr>
+</table>
+<div>
+    <h3>Sum of two numbers</h3>
+    <div ng-controller="CalculateCtrl">
+       <form>
+           <li>Number 1: <input type="text" ng-model="num1">
+           <li>Number 2: <input type="text" ng-model="num2">
+
+           <li>Sum : <input type="text" value="{{sum()}}"/></li>
+       </form>
+    </div>
+</div>
+
+</body>
+</html>
